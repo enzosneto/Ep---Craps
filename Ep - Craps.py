@@ -26,75 +26,84 @@ while(dinheiro > 0):
         print('Fase Come Out')
         
 # Pergunta no que deseja apostar
-        
-        Field = str(input('Deseja apostar em Field? (s/n) '))
-        if Field == 's':
-            aposta1 = int(input('Quanto deseja apostar? '))
-            dados1 = random.randint(2,12)
-            print('Seus dados foram {0}.'.format(dados1))
-            if dados1 in Lista_Field:
-                print('Você ganhou {0}.'.format(aposta1))
-                dinheiro += aposta1
-            elif dados1 == 2:
-                print('Você ganhou o dobro do que apostou.')
-                dinheiro += 2 * aposta1
-            elif dados1 == 12:
-                print('Você ganhou o triplo do que apostou!')
-                dinheiro += 3 * aposta1
-            else:
-                print('Você perdeu {0}.'.format(aposta1))
-                dinheiro = dinheiro - aposta1
-        print('Você tem {0} dinheiros.'.format(dinheiro))
+        if dinheiro >0:
+            Field = str(input('Deseja apostar em Field? (s/n) '))
+            if Field == 's':
+                aposta1 = int(input('Quanto deseja apostar? '))
+                dados1 = random.randint(2,12)
+                print('Seus dados foram {0}.'.format(dados1))
+                if dados1 in Lista_Field:
+                    print('Você ganhou {0}.'.format(aposta1))
+                    dinheiro += aposta1
+                elif dados1 == 2:
+                    print('Você ganhou o dobro do que apostou.')
+                    dinheiro += 2 * aposta1
+                elif dados1 == 12:
+                    print('Você ganhou o triplo do que apostou!')
+                    dinheiro += 3 * aposta1
+                else:
+                    print('Você perdeu {0}.'.format(aposta1))
+                    dinheiro = dinheiro - aposta1
+            print('Você tem {0} dinheiros.'.format(dinheiro))
+        else:
+            break
+            print("Acabou seu dinheiro, Você perdeu!")
+# Pergunta no que deseja apostar
+        if dinheiro >0:
+            Any_Craps = str(input('Deseja apostar em Any Craps? (s/n) '))
+            if Any_Craps == 's':
+                aposta2 = int(input('Quanto deseja apostar? '))
+                dados2 = random.randint(2,12)
+                print('Seus dados foram {0}.'.format(dados2))
+                if dados2 in lista_AC:
+                    print('Você ganhou 7 vezes o que apostou!')
+                    dinheiro += 7 * aposta2
+                else:
+                    print('Você perdeu {0}.'.format(aposta2))
+                    dinheiro = dinheiro - aposta2
+            print('Você tem {0} dinheiros.'.format(dinheiro))
+        else:
+            break
+            print("Acabou seu dinheiro, Você perdeu!")
         
 # Pergunta no que deseja apostar
-        
-        Any_Craps = str(input('Deseja apostar em Any Craps? (s/n) '))
-        if Any_Craps == 's':
-            aposta2 = int(input('Quanto deseja apostar? '))
-            dados2 = random.randint(2,12)
-            print('Seus dados foram {0}.'.format(dados2))
-            if dados2 in lista_AC:
-                print('Você ganhou 7 vezes o que apostou!')
-                dinheiro += 7 * aposta2
-            else:
-                print('Você perdeu {0}.'.format(aposta2))
-                dinheiro = dinheiro - aposta2
-        print('Você tem {0} dinheiros.'.format(dinheiro))
-        
-# Pergunta no que deseja apostar
-        
-        Twelve = str(input('Deseja apostar em Twelve? (s/n)'))
-        if Twelve == 's':
-            aposta3 = int(input('Quanto deseja apostar? '))
-            dados3 = random.randint(2,12)
-            print('Seus dados foram {0}.'.format(dados3))
-            if dados3 == 12:
-                print('Você ganhou 12 vezes o que apostou!')
-                dinheiro += 12 * aposta3
-            else:
-                print('Você perdeu {0}.'.format(aposta3))
-                dinheiro -= aposta3
-        print('Você tem {0} dinheiros'.format(dinheiro))
+        if dinheiro >0:
+            Twelve = str(input('Deseja apostar em Twelve? (s/n)'))
+            if Twelve == 's':
+                aposta3 = int(input('Quanto deseja apostar? '))
+                dados3 = random.randint(2,12)
+                print('Seus dados foram {0}.'.format(dados3))
+                if dados3 == 12:
+                    print('Você ganhou 12 vezes o que apostou!')
+                    dinheiro += 12 * aposta3
+                else:
+                    print('Você perdeu {0}.'.format(aposta3))
+                    dinheiro -= aposta3
+            print('Você tem {0} dinheiros'.format(dinheiro))
+        else:
+            break
+            print("Acabou seu dinheiro, Você perdeu!")
         
 # Pergunta no que deseja apostar    
-    
-        PLB = str(input('Deseja apostar em Pass Line Bet? (s/n)'))
-        if PLB == 's':
-            aposta4 = int(input('Quanto deseja apostar? '))
-            dados4 = random.randint(2,12)
-            print('Seus dados foram {0}.'.format(dados4))
-            if dados4 in Lista_ganha_PLB:
-                print('Você ganhou {0}.'.format(aposta4))
-                dinheiro += aposta4
-            elif dados4 in Lista_perde_PLB:
-                print('Você perdeu {0}.'.format(aposta4))
-                dinheiro = dinheiro - aposta4
-            elif dados4 in Lista_Point:
-                print('Como seus dados foram {0} você entrou no Point.'.format(dados4))
-                print('A aposta continua a mesma e você pode apostar em outros tipos de apostas.')
-                dados_point = random.randint(2,12)
+        if dinheiro >0:
+            PLB = str(input('Deseja apostar em Pass Line Bet? (s/n)'))
+            if PLB == 's':
+                aposta4 = int(input('Quanto deseja apostar? '))
+                dados4 = random.randint(2,12)
+                print('Seus dados foram {0}.'.format(dados4))
+                if dados4 in Lista_ganha_PLB:
+                    print('Você ganhou {0}.'.format(aposta4))
+                    dinheiro += aposta4
+                elif dados4 in Lista_perde_PLB:
+                    print('Você perdeu {0}.'.format(aposta4))
+                    dinheiro = dinheiro - aposta4
+                elif dados4 in Lista_Point:
+                    print('Como seus dados foram {0} você entrou no Point.'.format(dados4))
+                    print('A aposta continua a mesma e você pode apostar em outros tipos de apostas.')
+                    dados_point = random.randint(2,12)
                 while(dados4 != dados_point and dados4 != 7):
                     dinheiro = dinheiro - aposta4
+
                     
 # Pergunta se deseja apostar ou entrar no point
                     
@@ -148,13 +157,16 @@ while(dinheiro > 0):
                                 
                     else:
                         print('Começa o Point, novos dados serão rodados ate sair {0} (seu número anterior) ou 7.'.format(dados4))
+                        dados_point = random.randint(2,12)
                         print('Seus novos dados foram {0}.'.format(dados_point))
                         if dados_point == dados4:
                             print('Os dados foram iguais aos anteriores, você ganhou o Point.')
                             dinheiro += 2 * aposta4
                         elif dados_point == 7:
                             print('Os dados foram iguais a 7, você perdeu o Point.')
-                
+        else:
+            break
+            print("Acabou seu dinheiro, Você perdeu!")
 #Se desejar sair em vez de apostar o programa fecha.
                 
     else:
@@ -165,3 +177,4 @@ while(dinheiro > 0):
         
 else:
     print ("Você não tem saldo para apostar")
+    
