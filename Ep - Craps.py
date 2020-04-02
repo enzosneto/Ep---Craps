@@ -18,7 +18,7 @@ while(dinheiro > 0):
     
 # Pergutnando se deseja apostar ou parar de jogar
 
-    escolha1 = str(input('Deseja sair ou apostar?(digite apostar ou sair) ')
+    escolha1 = str(input('Deseja sair ou apostar?(Digite apostar ou sair) '))
     
 #Se escolher apostar, ele entra no if
     
@@ -27,8 +27,7 @@ while(dinheiro > 0):
         
 # Pergunta no que deseja apostar
         
-        print('Responda todas as perguntas com s ou n, menos as de aposta.')
-        Field = str(input('Deseja apostar em Field? '))
+        Field = str(input('Deseja apostar em Field? (s/n) '))
         if Field == 's':
             aposta1 = int(input('Quanto deseja apostar? '))
             dados1 = random.randint(2,12)
@@ -49,7 +48,7 @@ while(dinheiro > 0):
         
 # Pergunta no que deseja apostar
         
-        Any_Craps = str(input('Deseja apostar em Any Craps? '))
+        Any_Craps = str(input('Deseja apostar em Any Craps? (s/n) '))
         if Any_Craps == 's':
             aposta2 = int(input('Quanto deseja apostar? '))
             dados2 = random.randint(2,12)
@@ -64,7 +63,7 @@ while(dinheiro > 0):
         
 # Pergunta no que deseja apostar
         
-        Twelve = str(input('Deseja apostar em Twelve? '))
+        Twelve = str(input('Deseja apostar em Twelve? (s/n)'))
         if Twelve == 's':
             aposta3 = int(input('Quanto deseja apostar? '))
             dados3 = random.randint(2,12)
@@ -79,7 +78,7 @@ while(dinheiro > 0):
         
 # Pergunta no que deseja apostar    
     
-        PLB = str(input('Deseja apostar em Pass Line Bet? '))
+        PLB = str(input('Deseja apostar em Pass Line Bet? (s/n)'))
         if PLB == 's':
             aposta4 = int(input('Quanto deseja apostar? '))
             dados4 = random.randint(2,12)
@@ -121,7 +120,7 @@ while(dinheiro > 0):
                                 print('Você perdeu {0}.'.format(aposta5))
                                 dinheiro = dinheiro - aposta5
                         print('Você tem {0} dinheiros.'.format(dinheiro))
-                        Any_Craps = str(input('Deseja apostar em Any Craps? '))
+                        Any_Craps = str(input('Deseja apostar em Any Craps? (s/n) '))
                         if Any_Craps == 's':
                             aposta6 = int(input('Quanto deseja apostar? '))
                             dados6 = random.randint(2,12)
@@ -133,7 +132,7 @@ while(dinheiro > 0):
                                 print('Você perdeu {0}.'.format(aposta6))
                                 dinheiro = dinheiro - aposta6
                         print('Você tem {0} dinheiros.'.format(dinheiro))
-                        Twelve = str(input('Deseja apostar em Twelve? '))
+                        Twelve = str(input('Deseja apostar em Twelve? (s/n)'))
                         if Twelve == 's':
                             aposta7 = int(input('Quanto deseja apostar? '))
                             dados7 = random.randint(2,12)
